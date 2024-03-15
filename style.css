@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --ff-cursive: "Dancing Script", cursive;
+    --ff-normal: "Poppins", sans-serif;
+
+    --primary-400: #cd4037;
+    --primary-800: #3f365f;
+
+    --neutral-200: #edf2f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary-800);
+}
+
+body {
+    background-color: var(--neutral-200);
+}
+
+main {
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 1200px;
+    min-height: calc(100vh - 60px);
+}
+
+h1 {
+    font-family: var(--ff-cursive);
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+hr {
+    width: 30%;
+    height: 5px;
+    background-color: var(--primary-400);
+    border: none;
+    border-radius: 2px;
+}
+
+#catalogue {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.project {
+    background-color: var(--primary-800);
+    font-family: var(--ff-normal);
+
+    width: 250px;
+    height: 200px;
+
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .6rem;
+    cursor: pointer;
+}
+
+.project:hover {
+    box-shadow: 0 0 10px var(--primary-400);
+}
+
+.project .title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--neutral-200);
+}
+
+.project .desc {
+    text-align: center;
+    color: var(--neutral-200);
+    font-size: .9rem;
+}
+
+.project a {
+    text-decoration: none;
+    background-color: var(--primary-400);
+    color: var(--neutral-200);
+    border-radius: 5px;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.project a:hover {
+    background-color: var(--neutral-200);
+    color: var(--primary-400);
+}
+
+footer {
+    font-family: var(--ff-normal);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-400);
+}
+
+#last {
+    display: flex;
+    align-items: center;
+    color: var(--neutral-200);
+}
+
+#last img {
+    height: 20px;
+    padding: 0 5px;
+}
