@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+
+body {
+    background-image: url('./assets/mountain-bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 4rem;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 400;
+}
+
+#timer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+.num {
+    font-size: 4rem;
+    font-weight: 500;
+    width: 100px;
+}
