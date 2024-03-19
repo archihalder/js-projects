@@ -46,9 +46,11 @@ const question = document.querySelector("h1");
 const optionList = document.querySelectorAll("label");
 const inputList = document.querySelectorAll("input");
 
+let index = 0;
+let count = 0;
 
-function updateQuestion(idx) {
-    question.innerHTML = quizData[idx].question;
+function updateQuestion() {
+    question.innerHTML = quizData[index].question;
     optionList.forEach((i) => {
         const id = i.htmlFor;
         i.textContent = quizData[index][id];
@@ -63,22 +65,18 @@ inputList.forEach((i) => {
     })
 })
 
-let index = 0;
-let count = 0;
-updateQuestion(index);
+updateQuestion();
 
 submit.addEventListener("click", function () {
-    if (index < quizData.length) {
-        let ans = quizData[index].answer;
-        if (ans === chosenOption) {
-            count++;
-            // console.log(index, count);
-        }
-        index++;
-        if (index < quizData.length)
-            updateQuestion(index);
+    let ans = quizData[index].answer;
+    if (ans === chosenOption) {
+        count++;
     }
+    index++;
+
+    if (index < quizData.length)
+        updateQuestion();
     else {
-        alert(`Your score: ${count}`);
+        alert(`Your score: ${count}`)
     }
 })
