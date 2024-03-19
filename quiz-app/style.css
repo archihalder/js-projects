@@ -56,6 +56,11 @@ li {
     list-style: none;
 }
 
+li input,
+li label {
+    cursor: pointer;
+}
+
 button {
     height: 60px;
     border: none;
