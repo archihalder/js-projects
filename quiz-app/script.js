@@ -46,18 +46,27 @@ const question = document.querySelector("h1");
 const optionList = document.querySelectorAll("label");
 const inputList = document.querySelectorAll("input");
 
-let index = 0;
-let count = 0;
+let index = 0; // records the question number
+let count = 0; // records the score
 
+// loading the question and options
 function updateQuestion() {
     question.innerHTML = quizData[index].question;
     optionList.forEach((i) => {
         const id = i.htmlFor;
         i.textContent = quizData[index][id];
     })
+    clearOption();
 }
 
+// setting values of radio buttons to false
+function clearOption() {
+    inputList.forEach((i) => {
+        i.checked = false;
+    })
+}
 
+// answer selected by clicking the radio button
 let chosenOption = null;
 inputList.forEach((i) => {
     i.addEventListener("click", function () {
@@ -65,6 +74,7 @@ inputList.forEach((i) => {
     })
 })
 
+// loading the first question
 updateQuestion();
 
 submit.addEventListener("click", function () {
