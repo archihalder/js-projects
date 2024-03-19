@@ -38,6 +38,7 @@ h1 {
     font-family: var(--ff-cursive);
     font-weight: 700;
     font-size: 4rem;
+    text-align: center;
 }
 
 hr {
@@ -52,6 +53,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
 }
 
 .project {
